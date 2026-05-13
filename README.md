@@ -32,8 +32,8 @@ TODO
 ```js
 Bytes.isBytes(value)
 Bytes.alloc(size, fill)
-Bytes.view(value)
-Bytes.from(value, encoding)
+Bytes.view(value) // Zero-copy when possible
+Bytes.from(value, encoding) // Always a new copy
 Bytes.toString(value, encoding)
 Bytes.concat(list)
 Bytes.copy(source, target, start)

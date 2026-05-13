@@ -17,6 +17,7 @@ module.exports = class Bytes {
     return out
   }
 
+  // Zero-copy when possible
   static view (value) {
     if (value instanceof Uint8Array) {
       return value
@@ -30,8 +31,11 @@ module.exports = class Bytes {
       return new Uint8Array(value)
     }
 
+    if (value instanceof SharedArrayBuffer) {
+      return new Uint8Array(value)
+    }
+
     if (typeof value === 'string') {
-      // TODO: Encoding
       return Text.encode(value)
     }
 
@@ -39,9 +43,10 @@ module.exports = class Bytes {
       return new Uint8Array(value)
     }
 
-    throw new TypeError('Expected string, array, ArrayBuffer, or typed array')
+    throw new TypeError('Expected string, array, ArrayBuffer, SharedArrayBuffer, or typed array')
   }
 
+  // Always a new copy
   static from (value, encoding) {
     if (typeof value === 'string') {
       if (!encoding || encoding === 'utf8' || encoding === 'utf-8') {
