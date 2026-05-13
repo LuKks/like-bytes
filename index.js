@@ -59,6 +59,10 @@ module.exports = class Bytes {
       throw new Error('Unknown encoding: ' + encoding)
     }
 
+    if (Array.isArray(value)) {
+      return new Uint8Array(value)
+    }
+
     const view = Bytes.view(value)
     const out = new Uint8Array(view.byteLength)
 
