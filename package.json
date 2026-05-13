@@ -1,0 +1,25 @@
+{
+  "name": "like-bytes",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "standard && brittle test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukks/like-bytes.git"
+  },
+  "author": "Lucas Barrena (LuKks)",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/lukks/like-bytes/issues"
+  },
+  "homepage": "https://github.com/lukks/like-bytes#readme",
+  "devDependencies": {
+    "require-npm-global": "github:lukks/require-npm-global"
+  }
+}
