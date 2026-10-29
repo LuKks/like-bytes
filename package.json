@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/lukks/like-bytes#readme",
   "devDependencies": {
-    "get-npm-global": "^1.0.0"
+    "get-npm-global": "^1.0.1"
   }
 }
