@@ -1,4 +1,4 @@
-const test = require('require-npm-global')('brittle')
+const test = require('get-npm-global')('brittle')
 const Bytes = require('./index.js')
 
 test('isBytes', function (t) {

@@ -1,13 +1,13 @@
 {
   "name": "like-bytes",
   "version": "0.0.0",
-  "description": "",
+  "description": "Simple Uint8Array functions.",
   "main": "index.js",
   "files": [
     "lib"
   ],
   "scripts": {
-    "test": "standard && brittle test.js"
+    "test": "standard && brittle-node test.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/lukks/like-bytes#readme",
   "devDependencies": {
-    "require-npm-global": "github:lukks/require-npm-global"
+    "get-npm-global": "^1.0.0"
   }
 }
